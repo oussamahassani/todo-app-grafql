@@ -1,0 +1,5 @@
+const mongoss = require('mongoose')
+require ('dotenv').config()
+mongoss.connect(process.env.Atlas , { useNewUrlParser: true , useFindAndModify : false ,useUnifiedTopology: true})
+.then ( res => console.log("mangoos connected"))
+.catch ( err => console.log(err))
